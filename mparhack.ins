@@ -5,22 +5,6 @@
 \def\batchfile{mparhack.ins}
 \input docstrip.tex
 \def\makeCommand#1{\catcode`#1=0\relax}
-\@ifundefined{endbatchfile}
-	{\PackageError{mparhack.ins}
-		{%
-			^^J\space\space\space
-			The installation requires docstrip version 2.4d (1996/10/17)
-			^^J\space\space\space
-			or later (Type `H' for more help)%
-		}{%
-	   		An older version of docstrip has been input.\MessageBreak
-			Since this version won't install the current package\MessageBreak
-			properly, please get a current version (files docstrip.ins\MessageBreak
-			and docstrip.dtx) from CTAN.\MessageBreak
- 		}%
- 	\let\endbatchfile\endinput
-	}
-	{\relax}
 \preamble
 
 Workaround for the marginpar bug.

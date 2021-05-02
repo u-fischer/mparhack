@@ -1,6 +1,6 @@
 # mparhack package for LaTeX
 
-Version: 2005-04-17 v1.4
+Version: 2021-05-02 v1.5
 
 This package implements a workaround for the LATEX bug that marginpars
 sometimes appear on the wrong margin.

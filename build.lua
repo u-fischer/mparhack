@@ -7,12 +7,12 @@ installfiles = {
 '*.sty',
 }
 
-sourcefiles = {"*.dtx"}
+sourcefiles = {"*.dtx","*.ins"}
 
 checkruns=2
 
 textfiles = {"README.md"}
-unpackfiles = {'mparhack.dtx'}
+
 
 
 function update_tag(file,content,tagname,tagdate)

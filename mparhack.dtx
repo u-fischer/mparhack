@@ -73,8 +73,8 @@
 %
 % ===================================================================
 %  @LaTeX-package-file{
-%     version         = "1.4",
-%     date            = "2005/04/17",
+%     version         = "1.5",
+%     date            = "2021-05-02",
 %     filename        = "mparhack.sty",
 %     author-1        = "Tom Sgouros",
 %     email-1         = "tomfool@top.gso.uri.edu",
@@ -107,7 +107,7 @@
 % \title{\PackageName}
 % \author{Tom Sgouros\\ {\small\texttt{tomfool@top.gso.uri.edu}} \and
 %       Stefan Ulrich\\ {\small\href{mailto:stefanulrich@users.sourceforge.net}{\texttt{stefanulrich@users.sourceforge.net}}}}
-% \date{v1.4 2005-04-17\\[1ex] {\footnotesize CTAN:
+% \date{v1.5 2021-05-02\\[1ex] {\footnotesize CTAN:
 % \href{http://www.ucc.ie/cgi-bin/ctan?server=ftp.dante.de%2Ftex-archive&term=mparhack}
 %      {\texttt{macros/latex/contrib/supported/mparhack/}}}}
 % \maketitle
@@ -335,7 +335,7 @@
 %<*sty>
 \NeedsTeXFormat{LaTeX2e}[1997/04/14]
 \ProvidesPackage{mparhack}
-      [2005/04/17 v1.4  (T. Sgouros and S. Ulrich)]
+      [2021-05-02 v1.5  (T. Sgouros and S. Ulrich)]
 %    \end{macrocode}
 % ^^A --------------------------------------------------
 %    \subsubsection{Booleans, Options, etc.}
@@ -786,7 +786,12 @@
 %    the end we check if this number equals 0 (in which case the
 %    page hadn't been fininshed yet, and we didn't need to do anything)
 %    or 2 (the `interesting' case); else we signal an error.
-%
+%    \changes{v1.5}{2021-04-02}{%
+%         Changed definition of \Com{@outputdblcol} to allow
+%         \Com{hb@xt@} to correctly expands in shipout hooks. See
+%         \url{https://tex.stackexchange.com/q/595272/2388}
+%    }%
+
 %    \begin{macrocode}
 \newcommand\mph@orig@hb@xt@{}
 \newcommand\mph@orig@outputdblcol{}
