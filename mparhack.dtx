@@ -44,12 +44,7 @@
 %    \begin{macrocode}
 %<*driver>
 \documentclass{ltxdoc}
-\RequirePackage{url}%
-\IfFileExists{hyperref.sty}{\RequirePackage{hyperref}}{%
-%%% alternative definitions if hyperref is not available
-    \newcommand\href[2]{#2}%
-    \newcommand\url{\texttt}%
-}
+\RequirePackage{hyperref}
 \EnableCrossrefs
  %\DisableCrossrefs % Say \DisableCrossrefs if index is ready
 \CodelineIndex
