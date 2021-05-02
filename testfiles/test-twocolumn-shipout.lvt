@@ -1,0 +1,11 @@
+\input{regression-test}
+\documentclass[twocolumn]{article}
+\usepackage{mparhack}
+\AddToHook{shipout/background}{\put(0pt,0pt){}}
+
+\begin{document}
+
+\START
+tekst
+
+\end{document}
