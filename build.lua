@@ -13,7 +13,7 @@ checkruns=2
 
 textfiles = {"README.md"}
 
-
+packtdszip = false
 
 function update_tag(file,content,tagname,tagdate)
 
