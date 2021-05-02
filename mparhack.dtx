@@ -36,7 +36,7 @@
 % \DoNotIndex{\newcount,\newif,\newlinechar,\newread,\newtoks,\newwrite}
 % \DoNotIndex{\dp,\wd,\ht,\vss,\unskip}
 %
-% \CheckSum{418}
+% \CheckSum{417}
 %
 % \MakeShortVerb\|
 %
@@ -117,15 +117,15 @@
 %    that marginpars sometimes show up on the wrong margin.
 % \end{abstract}
 %
-% \changes{1.0}{1999/03/02}{Created}
-% \changes{1.1}{1999/09/23}{Rewrite to use only one label per page, and to implement
+% \changes{v1.0}{1999/03/02}{Created}
+% \changes{v1.1}{1999/09/23}{Rewrite to use only one label per page, and to implement
 %               `twocolumn' document option.}
 % \changes{v1.2}{2000/02/29}{Small documentation changes}
-% \changes{1.2a}{2000/03/14}{Fixed the \Com{NeedsTeXFormat} to use 1997/04/14}
-% \changes{1.2c}{2001/02/07}{Small documentation changes}
-% \changes{1.3}{2001/02/07}{Use \Com{mph@tempa} instead of \Com{@tempa} to avoid
+% \changes{v1.2a}{2000/03/14}{Fixed the \Com{NeedsTeXFormat} to use 1997/04/14}
+% \changes{v1.2c}{2001/02/07}{Small documentation changes}
+% \changes{v1.3}{2001/02/07}{Use \Com{mph@tempa} instead of \Com{@tempa} to avoid
 %               possible clashes with other classes (e.g. scrpage2)}
-% \changes{1.4}{2005/04/17}{Fix a bug with eso-pic.sty (latex/3775)}
+% \changes{v1.4}{2005/04/17}{Fix a bug with eso-pic.sty (latex/3775)}
 %
 %
 % {\parskip 0pt \tableofcontents }
@@ -254,19 +254,7 @@
 %    label per page (instead of one label each marginpar, as in a
 %    previous version).
 %
-% ^^A --------------------------------------------------
-% ^^A Place to stop if implementation shouldn't be printed
-% ^^A --------------------------------------------------
-%
-%    \typein[\answer]%
-%        {^^JPrint an annotated listing of the macro definitions (y/n)? [n]}
-%    \def\next{y}^^A
-%    \ifx\answer\next
-%    \AfterElseFi\AlsoImplementation
-%    \else
-%        \typeout{(not printing macro definitions.)}^^A
-%        \expandafter\endinput
-%    \fi
+%    \AlsoImplementation
 %    \StopEventually{\relax}
 % ^^A --------------------------------------------------
 %    \section{Implementation}
@@ -842,24 +830,7 @@
 %</sty>
 %    \end{macrocode}
 % ^^A\typeout{End of package documentation.}
-% \typein[\answer]%
-%   {^^JPrint an index of command names (y/n)? [n]^^J^^A
-%       -- Note: this requires a previous run of:^^J^^A
-%       \space\space\space makeindex -s gind.ist \PackageNameNoExt^^J}
-%    \def\next{y}^^A
-%    \ifx\answer\next
-%    \AfterElseFi\PrintIndex
-%    \else
-%        \typeout{(not printing index.)}^^A
-%    \fi
-% \typein[\answer]%
-%   {^^JPrint a history of changes (y/n)? [n]^^J^^A
-%       -- Note: this requires a previous run of:^^J^^A
-%       \space\space\space makeindex -s gglo.ist -o \PackageNameNoExt.gls \PackageNameNoExt.glo^^J}
-%    \def\next{y}^^A
-%    \ifx\answer\next
-%    \AfterElseFi\PrintChanges
-%    \else
-%        \typeout{(not printing history of changes.)}^^A
-%    \fi
+% ^^A makeindex -s gind.ist \PackageNameNoExt^^J}
+%   \PrintIndex
+%   \PrintChanges
 % \Finale
