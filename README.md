@@ -8,7 +8,7 @@ sometimes appear on the wrong margin.
 
 
 ## Copyright (C)
-* 2005             Tom Sgouros, Stefan Ulrich
+* 1999- 2005       Tom Sgouros, Stefan Ulrich
 * 2021             LaTeX Project Team
 
 ## License
