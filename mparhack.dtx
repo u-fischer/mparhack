@@ -4,12 +4,12 @@
 % modify it under the terms of the GNU General Public License
 % as published by the Free Software Foundation; either version 2
 % of the License, or (at your option) any later version.
-% 
+%
 % This program is distributed in the hope that it will be useful,
 % but WITHOUT ANY WARRANTY; without even the implied warranty of
 % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 % GNU General Public License for more details.
-% 
+%
 % You should have received a copy of the GNU General Public License
 % along with this program; if not, write to the Free Software
 % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
@@ -107,7 +107,7 @@
 % \title{\PackageName}
 % \author{Tom Sgouros\\ {\small\texttt{tomfool@top.gso.uri.edu}} \and
 %       Stefan Ulrich\\ {\small\href{mailto:stefanulrich@users.sourceforge.net}{\texttt{stefanulrich@users.sourceforge.net}}}}
-% \date{v1.4 2005/04/17\\[1ex] {\footnotesize CTAN:
+% \date{v1.4 2005-04-17\\[1ex] {\footnotesize CTAN:
 % \href{http://www.ucc.ie/cgi-bin/ctan?server=ftp.dante.de%2Ftex-archive&term=mparhack}
 %      {\texttt{macros/latex/contrib/supported/mparhack/}}}}
 % \maketitle
@@ -198,7 +198,7 @@
 %    \texttt{debug} option; this will output a lot of tracing
 %    information and will add numbers to the marginpars in the |.dvi|
 %    file for reference.
-%    
+%
 %
 % ^^A --------------------------------------------------
 %    \section{Bugs\slash Restrictions}
@@ -243,7 +243,7 @@
 %       package option enabled). Suggestions/improvements are also welcome,
 %       of course.
 %    \end{itemize}
-%   
+%
 % ^^A --------------------------------------------------
 %    \section{Acknowledgements}
 % ^^A --------------------------------------------------
@@ -326,7 +326,7 @@
 %    check for even-\slash oddness.
 %
 % ^^A --------------------------------------------------
-%    \subsection{Code} 
+%    \subsection{Code}
 % ^^A --------------------------------------------------
 %
 %    We need at least \LaTeX\ version 1997/04/14 which introduced
@@ -338,7 +338,7 @@
       [2005/04/17 v1.4  (T. Sgouros and S. Ulrich)]
 %    \end{macrocode}
 % ^^A --------------------------------------------------
-%    \subsubsection{Booleans, Options, etc.} 
+%    \subsubsection{Booleans, Options, etc.}
 % ^^A --------------------------------------------------
 %    Some boolean switches which we will be using:
 %    |\if@mph@firstcol@| indicates that the current column is the
@@ -391,8 +391,8 @@
 \ProcessOptions*
 %    \end{macrocode}
 % ^^A --------------------------------------------------
-%    \subsubsection{Commands} 
-% ^^A --------------------------------------------------    
+%    \subsubsection{Commands}
+% ^^A --------------------------------------------------
 %    \begin{macro}{\mph@nr}
 %    A command sequence containing the current marginpar number (which
 %    will be written to the |.aux| file).
@@ -407,7 +407,7 @@
 \newcommand*\mph@lastpage{0}
 %    \end{macrocode}
 %    \end{macro}
-%    
+%
 %    \begin{macro}{\mph@cnt}
 %    Emulate a counter with a command name to save one count
 %    register. Oh well~\dots \texttt{;-)}
@@ -510,7 +510,7 @@
     }%
 }
 %    \end{macrocode}
-%    
+%
 %    \begin{macro}{\mph@ifundef@or@smaller}
 %    A helper macro that checks if the command sequence in |#1| is
 %    undefined or if its value is smaller than |\mph@cnt| (it assumes
@@ -537,7 +537,7 @@
 
 %    \end{macrocode}
 %    \end{macro}
-%    
+%
 %    \begin{macro}{\mph@pg@orig}
 %    \changes{v1.2}{2000/02/29}{%
 %         Added the \Com{mph@pg@orig} macro
@@ -551,7 +551,7 @@
 \newcommand*\mph@pg@orig{}
 %    \end{macrocode}
 %    \end{macro}
-%    
+%
 %    \begin{macro}{\mph@get@margin}
 %    This macro does most of the work described in
 %    section~\ref{implementation}.
@@ -604,7 +604,7 @@
                 }%
             }%
         }{%
-            \@tempswafalse               
+            \@tempswafalse
             \global\@mph@firstcol@true
             \mph@debug{exiting loop}%
         }%
@@ -672,10 +672,10 @@
 
 %    \end{macrocode}
 %    \end{macro}
-%    
+%
 % ^^A --------------------------------------------------
-%    \subsubsection{Patching the output routine} 
-% ^^A --------------------------------------------------    
+%    \subsubsection{Patching the output routine}
+% ^^A --------------------------------------------------
 %    We have to hook into 3 commands that are part of \LaTeX's output routine:
 %    |\@addmarginpar|, |\@outputdblcol| and |\@outputpage|. For the latter, we can use the default
 %    \LaTeX\ mechanism |\g@addto@macro|. For the others, this is more difficult,
@@ -700,7 +700,7 @@
 %    }%
 %    \changes{v1.2}{2000/02/29}{%
 %         Added \Com{CheckCommand*} for \Com{@addmarginpar}, \Com{@outputpage}
-%         and \Com{@outputdblcol} 
+%         and \Com{@outputdblcol}
 %    }%
 %    \changes{v1.2b}{2000/09/01}{%
 %         Replaced \Com{CheckCommand*} and the full redefinitions of
@@ -773,7 +773,7 @@
 
 %    \end{macrocode}
 %    \end{macro}
-%        
+%
 %    \begin{macro}{\@outputdblcol}
 %    In case an entire twocolumn page is finished, this command calls
 %    \Com{hb@xt@} with the boxes for the two columns inside, and each
@@ -808,10 +808,10 @@
                     }%
                 }%
             }%
+            \mph@orig@hb@xt@##1{##2\mph@tempa}%
         \else
-            \def\mph@tempa{}%
+            \mph@orig@hb@xt@##1{##2}%
         \fi
-        \mph@orig@hb@xt@##1{##2\mph@tempa}%
     }%
     \mph@orig@outputdblcol
     \def\hb@xt@{\mph@orig@hb@xt@}%
@@ -822,11 +822,11 @@
             \mph@error{\string\@outputdblcol}%
         \fi
     \fi
-}   
+}
 
 %    \end{macrocode}
 %    \end{macro}
-%    
+%
 %    \begin{macro}{\mph@orig@picture}
 %    \begin{macrocode}
 \newcommand\mph@orig@picture{}
@@ -857,4 +857,4 @@
 %    \else
 %        \typeout{(not printing history of changes.)}^^A
 %    \fi
-% \Finale 
+% \Finale
