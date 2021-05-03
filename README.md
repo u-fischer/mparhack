@@ -12,4 +12,4 @@ sometimes appear on the wrong margin.
 * 2021             Tom Sgouros, Stefan Ulrich, Ulrike Fischer
 
 ## License
-LATEX Project Public License, version 1.3c or later.
+GNU General Public License 2 or later
